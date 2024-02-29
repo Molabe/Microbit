@@ -62,5 +62,4 @@ let character = ""
 game.setScore(0)
 game.setLife(2)
 randomChar()
-basic.pause(3000)
 basic.showString(character)
