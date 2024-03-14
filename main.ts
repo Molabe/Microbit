@@ -15,19 +15,20 @@ input.onButtonPressed(Button.A, function () {
         randomChar()
         basic.pause(3000)
         basic.showString(character)
+        if (game.life() == 0) {
+            game.gameOver()
+        }
     }
 })
-
 input.onButtonPressed(Button.AB, function () {
     game.isRunning()
-    randomChar()
+randomChar()
     basic.pause(3000)
     basic.showString(character)
     if (game.life() == 0) {
         game.gameOver()
     }
 })
-
 input.onButtonPressed(Button.B, function () {
     if (character == "B") {
         basic.clearScreen()
@@ -45,19 +46,21 @@ input.onButtonPressed(Button.B, function () {
         randomChar()
         basic.pause(3000)
         basic.showString(character)
+        if (game.life() == 0) {
+            game.gameOver()
+        }
     }
 })
-
-function randomChar() {
+function randomChar () {
     basic.pause(500)
-    let characterGenerator = randint(0, 1)
+    characterGenerator = randint(0, 1)
     if (characterGenerator == 0) {
         character = "A"
     } else {
         character = "B"
     }
 }
-
+let characterGenerator = 0
 let character = ""
 game.setScore(0)
 game.setLife(2)
