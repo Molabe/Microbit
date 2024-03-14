@@ -20,15 +20,6 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
-input.onButtonPressed(Button.AB, function () {
-    game.isRunning()
-randomChar()
-    basic.pause(3000)
-    basic.showString(character)
-    if (game.life() == 0) {
-        game.gameOver()
-    }
-})
 input.onButtonPressed(Button.B, function () {
     if (character == "B") {
         basic.clearScreen()
